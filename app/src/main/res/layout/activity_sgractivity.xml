@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SGRActivity">
+
+    <TextView
+        android:id="@+id/textViewTitleSGR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Specific Growth Rate (SGR) Calculator"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextInitialWeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Initial Weight (g)"
+        android:inputType="numberDecimal"
+        android:layout_below="@id/textViewTitleSGR"
+        android:layout_margin="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextFinalWeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Final Weight (g)"
+        android:inputType="numberDecimal"
+        android:layout_below="@id/editTextInitialWeight"
+        android:layout_margin="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextDaysSGR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Number of Days"
+        android:inputType="number"
+        android:layout_below="@id/editTextFinalWeight"
+        android:layout_margin="16dp"/>
+
+    <Button
+        android:id="@+id/btnCalculateSGR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate SGR"
+        android:layout_below="@id/editTextDaysSGR"
+        android:layout_marginTop="24dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/textViewSGRResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SGR Result: "
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@id/btnCalculateSGR"
+        android:layout_marginTop="24dp"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

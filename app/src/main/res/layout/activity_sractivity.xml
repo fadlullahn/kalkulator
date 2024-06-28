@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SRActivity">
+
+    <TextView
+        android:id="@+id/textViewTitleSR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Feed Conversion Ratio (FCR) Calculator"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextInitialFishCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Initial Fish Count"
+        android:inputType="number"
+        android:layout_below="@id/textViewTitleSR"
+        android:layout_marginTop="16dp"
+        android:padding="8dp" />
+
+    <EditText
+        android:id="@+id/editTextFinalFishCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Final Fish Count"
+        android:inputType="number"
+        android:layout_below="@id/editTextInitialFishCount"
+        android:layout_marginTop="16dp"
+        android:padding="8dp" />
+
+    <Button
+        android:id="@+id/btnCalculateSR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate SR"
+        android:layout_below="@id/editTextFinalFishCount"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+        android:padding="8dp" />
+
+    <TextView
+        android:id="@+id/textViewSRResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SR Result: "
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@id/btnCalculateSR"
+        android:layout_marginTop="24dp"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

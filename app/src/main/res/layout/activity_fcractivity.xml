@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FCRActivity">
+
+    <TextView
+        android:id="@+id/textViewTitleFCR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Feed Conversion Ratio (FCR) Calculator"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextTotalFeed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Total Feed (kg)"
+        android:inputType="numberDecimal"
+        android:layout_below="@id/textViewTitleFCR"
+        android:layout_margin="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextTotalFish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Total Fish Weight (kg)"
+        android:inputType="numberDecimal"
+        android:layout_below="@id/editTextTotalFeed"
+        android:layout_margin="16dp"/>
+
+    <Button
+        android:id="@+id/btnCalculateFCR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate FCR"
+        android:layout_below="@id/editTextTotalFish"
+        android:layout_marginTop="24dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/textViewFCRResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FCR Result: "
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@id/btnCalculateFCR"
+        android:layout_marginTop="24dp"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>
