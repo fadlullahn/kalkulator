@@ -18,40 +18,49 @@
         android:layout_marginBottom="16dp"/>
 
     <EditText
-        android:id="@+id/editTextTotalFeedFR"
+        android:id="@+id/editTextAverageWeight"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter Total Feed (kg)"
+        android:hint="Rataan Bobot Ikan (kg)"
         android:inputType="numberDecimal"
         android:layout_below="@id/textViewTitleFR"
         android:layout_margin="16dp"/>
 
     <EditText
-        android:id="@+id/editTextDaysFR"
+        android:id="@+id/editTextTotalFishCount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter Number of Days"
+        android:hint="Jumlah Ikan"
         android:inputType="number"
-        android:layout_below="@id/editTextTotalFeedFR"
+        android:layout_below="@id/editTextAverageWeight"
+        android:layout_margin="16dp"/>
+
+    <EditText
+        android:id="@+id/editTextFeedRatePercent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Feed Rate (%)"
+        android:inputType="numberDecimal"
+        android:layout_below="@id/editTextTotalFishCount"
         android:layout_margin="16dp"/>
 
     <Button
-        android:id="@+id/btnCalculateFR"
+        android:id="@+id/btnCalculateFeedRequirement"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Calculate FR"
-        android:layout_below="@id/editTextDaysFR"
+        android:layout_below="@id/editTextFeedRatePercent"
         android:layout_marginTop="24dp"
         android:layout_centerHorizontal="true"/>
 
     <TextView
-        android:id="@+id/textViewFRResult"
+        android:id="@+id/textViewFeedRequirementResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="FR Result: "
+        android:text="FR Result"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:layout_below="@id/btnCalculateFR"
+        android:layout_below="@id/btnCalculateFeedRequirement"
         android:layout_marginTop="24dp"
         android:layout_centerHorizontal="true"/>
 

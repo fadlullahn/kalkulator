@@ -10,44 +10,48 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class FRActivity extends AppCompatActivity {
 
-    private EditText editTextTotalFeedFR;
-    private EditText editTextDaysFR;
-    private Button btnCalculateFR;
-    private TextView textViewFRResult;
+    private EditText editTextAverageWeight;
+    private EditText editTextTotalFishCount;
+    private EditText editTextFeedRatePercent;
+    private Button btnCalculateFeedRequirement;
+    private TextView textViewFeedRequirementResult;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fractivity);
 
-        editTextTotalFeedFR = findViewById(R.id.editTextTotalFeedFR);
-        editTextDaysFR = findViewById(R.id.editTextDaysFR);
-        btnCalculateFR = findViewById(R.id.btnCalculateFR);
-        textViewFRResult = findViewById(R.id.textViewFRResult);
+        editTextAverageWeight = findViewById(R.id.editTextAverageWeight);
+        editTextTotalFishCount = findViewById(R.id.editTextTotalFishCount);
+        editTextFeedRatePercent = findViewById(R.id.editTextFeedRatePercent);
+        btnCalculateFeedRequirement = findViewById(R.id.btnCalculateFeedRequirement);
+        textViewFeedRequirementResult = findViewById(R.id.textViewFeedRequirementResult);
 
-        btnCalculateFR.setOnClickListener(new View.OnClickListener() {
+        btnCalculateFeedRequirement.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                calculateFR();
+                calculateDailyFeedRequirement();
             }
         });
     }
 
-    private void calculateFR() {
+    private void calculateDailyFeedRequirement() {
         try {
             // Ambil nilai dari EditText dan konversi ke double
-            double totalFeedKg = Double.parseDouble(editTextTotalFeedFR.getText().toString());
-            int days = Integer.parseInt(editTextDaysFR.getText().toString());
+            double averageWeightPerFishKg = Double.parseDouble(editTextAverageWeight.getText().toString());
+            int totalFishCount = Integer.parseInt(editTextTotalFishCount.getText().toString());
+            double feedRatePercent = Double.parseDouble(editTextFeedRatePercent.getText().toString());
 
-            // Hitung FR langsung dalam kilogram
-            double fr = totalFeedKg / days;
+            // Konversi feed rate dari persen ke desimal
+            double feedRateDecimal = feedRatePercent / 100.0;
 
-            // Tampilkan hasil FR
-            textViewFRResult.setText("FR Result: " + String.format("%.2f", fr) + " kg/day");
+            // Hitung jumlah pakan harian
+            double dailyFeedRequirementKg = averageWeightPerFishKg * totalFishCount * feedRateDecimal;
+
+            // Tampilkan hasil kebutuhan pakan harian
+            textViewFeedRequirementResult.setText("Kebutuhan Pakan Harian: " + String.format("%.2f", dailyFeedRequirementKg) + " kg/hari");
         } catch (NumberFormatException e) {
-            textViewFRResult.setText("Error: Please enter valid numbers.");
+            textViewFeedRequirementResult.setText("Error: Mohon masukkan angka yang valid.");
         }
     }
-
-
 }

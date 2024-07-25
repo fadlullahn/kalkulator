@@ -9,7 +9,7 @@
         android:id="@+id/textViewTitleSR"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Feed Conversion Ratio (FCR) Calculator"
+        android:text="Survival Rate (SR) Calculator"
         android:textSize="24sp"
         android:textStyle="bold"
         android:textColor="@android:color/black"
