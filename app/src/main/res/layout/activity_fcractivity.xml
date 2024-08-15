@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/nila"
     tools:context=".FCRActivity">
 
     <TextView
@@ -12,19 +13,25 @@
         android:text="Feed Conversion Ratio (FCR) Calculator"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:gravity="center"
         android:layout_marginTop="32dp"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="16dp"
+        android:shadowColor="@android:color/black"
+        android:shadowDx="15"
+        android:shadowDy="15"
+        android:shadowRadius="22"/>
 
     <EditText
         android:id="@+id/editTextTotalFeed"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Total Feed (kg)"
+        android:textColor="@android:color/white"
         android:inputType="numberDecimal"
         android:layout_below="@id/textViewTitleFCR"
-        android:layout_margin="16dp"/>
+        android:layout_margin="16dp"
+        />
 
     <EditText
         android:id="@+id/editTextTotalFish"
@@ -49,9 +56,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="FCR Result: "
+        android:textColor="@android:color/white"
         android:textSize="18sp"
         android:textStyle="bold"
         android:layout_below="@id/btnCalculateFCR"
         android:layout_marginTop="24dp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:shadowColor="@android:color/black"
+        android:shadowDx="15"
+        android:shadowDy="15"
+        android:shadowRadius="22"/>
 </RelativeLayout>

@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/nila"
     tools:context=".FRActivity">
 
     <TextView
@@ -12,10 +13,14 @@
         android:text="Feed Rate (FR) Calculator"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:gravity="center"
         android:layout_marginTop="32dp"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="16dp"
+        android:shadowDx="15"
+        android:shadowDy="15"
+        android:shadowRadius="22"
+        />
 
     <EditText
         android:id="@+id/editTextAverageWeight"
@@ -62,6 +67,10 @@
         android:textStyle="bold"
         android:layout_below="@id/btnCalculateFeedRequirement"
         android:layout_marginTop="24dp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:shadowDx="15"
+        android:shadowDy="15"
+        android:shadowRadius="22"
+        android:textColor="@android:color/white"/>
 
 </RelativeLayout>
